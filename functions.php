@@ -42,7 +42,10 @@ function retreive_memdata(){
          //echo 'data found'; //print_r($results);
 		 //foreach($results as $memres) where 
 		  $ind_entries = $wpdb->get_results("SELECT DISTINCT entry_id FROM wp_smuzform_entry_data");
-		  
+		  foreach($ind_entries as $eids){
+			  echo $eids;
+			  
+		  }
 		 $eid=1;
 		  $indvdata = $wpdb->get_results("SELECT value,entry_id FROM wp_smuzform_entry_data");
 		    //echo  $eid." ";
